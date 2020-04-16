@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Navigation</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <h1>NAV</h1>
+      </div>
+      <ul class="list-items">
+        <li class="list"><a href="#" class="link">HOME</a></li>
+        <li class="list"><a href="#" class="link">ABOUT</a></li>
+        <li class="list"><a href="#" class="link">CONTACT US</a></li>
+        <li class="list"><a href="#" class="link">MORE</a></li>
+      </ul>
+      <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+    <section class="bg">
+      <img src="bg.jpg" alt="bg" />
+    </section>
+    <script>
+      let menuBtn = document.querySelector(".menu-btn");
+      let listEl = document.querySelectorAll(".list");
+      menuBtn.addEventListener("click", function () {
+        for (let i = 0; i < listEl.length; i++) {
+          listEl[i].classList.toggle("show");
+          listEl[i].style.transitionDelay = "0." + i + "s";
+        }
+      });
+    </script>
+  </body>
+</html>
